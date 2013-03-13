@@ -59,7 +59,7 @@ class people::dorkscript{
     ],
     packages => {
       brew   => [
-        #'tmux'
+        'distribute'
       ],
       pip => [
         'virtualenv',
