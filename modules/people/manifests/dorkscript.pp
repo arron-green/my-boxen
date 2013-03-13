@@ -61,6 +61,10 @@ class people::dorkscript{
     }
   }
 
+  file { [ "${env['directories']['home']}/.janus" ]:
+    ensure => "directory",
+  }
+
   # Install Brew Applications
   package { $env['packages']['brew']:
     provider => 'homebrew',
