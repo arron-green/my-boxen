@@ -71,7 +71,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.1.0)
+    homebrew (1.1.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -119,6 +119,11 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-postgresql
+  specs:
+    postgresql (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-python
   specs:
     python (1.1.1)
@@ -137,6 +142,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-sysctl
+  specs:
+    sysctl (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-vagrant
@@ -182,7 +192,7 @@ DEPENDENCIES
   gcc (= 1.0.0)
   gcc (= 1.0.0)
   git (= 1.0.0)
-  homebrew (= 1.1.0)
+  homebrew (= 1.1.2)
   hub (= 1.0.0)
   inifile (= 0.9.0)
   intellij (= 1.1.2)
@@ -194,11 +204,13 @@ DEPENDENCIES
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
   pkgconfig (= 1.0.0)
+  postgresql (= 1.0.0)
   python (= 1.1.1)
   ruby (= 3.1.0)
   stdlib (= 3.0.0)
   sublime_text_2 (= 1.1.0)
   sudo (= 1.0.0)
+  sysctl (= 1.0.0)
   vagrant (= 1.0.0)
   virtualbox (= 1.0.1)
   vlc (= 1.0.0)

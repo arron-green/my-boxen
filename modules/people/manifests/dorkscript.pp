@@ -10,7 +10,7 @@ class people::dorkscript{
   include colloquy
   #include python
   include chrome
-  include firefox
+  #include firefox
   include dropbox
   include java
   include alfred
@@ -19,6 +19,9 @@ class people::dorkscript{
   include xquartz
   include lastpass
   include diffmerge
+  include wget
+  include postgresql
+  include tmux
 
   class { 'intellij':
     edition => 'community'
@@ -30,7 +33,7 @@ class people::dorkscript{
   Boxen::Osx_defaults {
     user => $::luser,
   }
-  
+
   $env = {
     apps_dir => '/Applications',
     directories => {
@@ -47,14 +50,13 @@ class people::dorkscript{
     ],
     dotfiles => [
       'gitconfig',
-      #'janus/solarized',
-      #'janus/jellybeans',
+      'janus/solarized',
+      'janus/jellybeans',
       'vimrc.after',
     ],
     packages => {
       brew   => [
-        'wget',
-        'tmux'
+        #'tmux'
       ]
     }
   }
@@ -145,9 +147,11 @@ class people::dorkscript{
   }
 
   #add each application to dock
+  /*
   ~> people::dorkscript::add_to_dock { $env['docked']:
     app_dir => $env['apps_dir'],
   }
+  */
 
   #Install Janus
   repository { 'janus':
