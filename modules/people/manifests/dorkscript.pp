@@ -60,12 +60,21 @@ class people::dorkscript{
     packages => {
       brew   => [
         #'tmux'
-      ]
+      ],
+      pip => [
+        'virtualenv',
+      ],
     }
   }
 
   file { [ "${env['directories']['home']}/.janus" ]:
     ensure => "directory",
+  }
+
+
+  # Install pip packages
+  package { $env['packages']['pip']:
+    provider => 'pip',
   }
 
   # Install Brew Applications
