@@ -8,9 +8,7 @@ class people::dorkscript{
   include iterm2::stable
   include gcc
   include colloquy
-  #include python
   include chrome
-  #include firefox
   include dropbox
   include java
   include alfred
@@ -22,6 +20,7 @@ class people::dorkscript{
   include wget
   include postgresql
   include tmux
+  include python
 
   class { 'intellij':
     edition => 'community'
