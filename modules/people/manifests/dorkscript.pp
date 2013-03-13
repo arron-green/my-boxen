@@ -52,6 +52,10 @@ class people::dorkscript{
       'gitconfig',
       'janus/solarized',
       'janus/jellybeans',
+      'janus/tcomment_vim',
+      'janus/vim-eunuch',
+      'janus/vim-powerline',
+      'vimrc.before',
       'vimrc.after',
     ],
     packages => {
