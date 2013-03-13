@@ -21,6 +21,7 @@ class people::dorkscript{
   include diffmerge
   include wget
   include postgresql
+  include tmux
 
   class { 'intellij':
     edition => 'community'
@@ -55,7 +56,7 @@ class people::dorkscript{
     ],
     packages => {
       brew   => [
-        'tmux'
+        #'tmux'
       ]
     }
   }
