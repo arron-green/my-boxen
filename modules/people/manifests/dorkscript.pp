@@ -59,9 +59,9 @@ class people::dorkscript{
     ],
     packages => {
       brew   => [
-        'distribute'
       ],
       pip => [
+        'distribute',
         'virtualenv',
       ],
     }
