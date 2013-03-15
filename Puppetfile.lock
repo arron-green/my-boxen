@@ -14,6 +14,11 @@ GITHUBTARBALL
     lastpass (0.0.2)
 
 GITHUBTARBALL
+  remote: DorkScript/puppet-postgresql
+  specs:
+    postgresql (1.0.1)
+
+GITHUBTARBALL
   remote: DorkScript/puppet-xquartz
   specs:
     xquartz (1.0.1)
@@ -114,11 +119,6 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-postgresql
-  specs:
-    postgresql (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-python
   specs:
     python (1.1.1)
@@ -203,7 +203,7 @@ DEPENDENCIES
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
   pkgconfig (= 1.0.0)
-  postgresql (= 1.0.0)
+  postgresql (= 1.0.1)
   python (= 1.1.1)
   ruby (= 3.3.1)
   stdlib (= 3.0.0)
