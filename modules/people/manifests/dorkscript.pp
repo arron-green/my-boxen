@@ -36,8 +36,8 @@ class people::dorkscript{
   $env = {
     apps_dir => '/Applications',
     directories => {
-      home      => '/Users/agreen',
-      dotfiles  => '/Users/agreen/.dotfiles'
+      home      => '/Users/arron',
+      dotfiles  => '/Users/arron/.dotfiles'
     },
     docked => [
       'Google\ Chrome.app',
@@ -51,9 +51,9 @@ class people::dorkscript{
       'gitconfig',
       'janus/solarized',
       'janus/jellybeans',
-      # 'janus/tcomment_vim',
-      # 'janus/vim-eunuch',
-      # 'janus/vim-powerline',
+      'janus/tcomment_vim',
+      'janus/vim-eunuch',
+      'janus/vim-powerline',
       'vimrc.before',
       'vimrc.after',
     ],
