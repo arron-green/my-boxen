@@ -21,6 +21,7 @@ class people::dorkscript{
   include postgresql
   include tmux
   include python
+  include maven
 
   class { 'intellij':
     edition => 'community'
