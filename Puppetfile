@@ -59,4 +59,5 @@ github "intellij", "1.1.2"
 github "tmux", "1.0.1"
 
 # github "postgresql", "1.0.1", :repo => "DorkScript/puppet-postgresql"
-github "postgresql", "1.0.0", :repo => "boxen/puppet-postgresql"
+github "postgresql", "1.0.0", :repo   => "boxen/puppet-postgresql"
+github "maven", "1.0.0", :repo        => "steinim/puppet-maven"
