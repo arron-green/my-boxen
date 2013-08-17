@@ -5,7 +5,7 @@ require gcc
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
-  user        => $luser,
+  user        => $boxen_user,
 
   path => [
     "${boxen::config::home}/rbenv/shims",
@@ -20,13 +20,13 @@ Exec {
 
   environment => [
     "HOMEBREW_CACHE=${homebrew::config::cachedir}",
-    "HOME=/Users/${::luser}"
+    "HOME=/Users/${::boxen_user}"
   ]
 }
 
 File {
   group => 'staff',
-  owner => $luser
+  owner => $boxen_user
 }
 
 Package {
@@ -39,7 +39,10 @@ Repository {
   extra    => [
     '--recurse-submodules'
   ],
-  require  => Class['git']
+  require  => File["${boxen::config::bindir}/boxen-git-credential"],
+  config   => {
+    'credential.helper' => "${boxen::config::bindir}/boxen-git-credential"
+  }
 }
 
 Service {
@@ -55,7 +58,6 @@ node default {
   
   include hub
   include nginx
-  include nvm
 
   # fail if FDE is not enabled
   #disabling FDE
@@ -64,9 +66,10 @@ node default {
   #}
 
   # node versions
-  #include nodejs::0-4
-  #include nodejs::0-6
-  include nodejs::0-8
+  # include nodejs::v0_4
+  # include nodejs::v0_6
+  include nodejs::v0_8
+  include nodejs::v0_10
 
   # default ruby versions
   include ruby::1_8_7
